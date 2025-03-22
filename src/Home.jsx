@@ -1,14 +1,17 @@
+import foto from './assets/foto_giulia.jpg'
 const Home = () => {
   return (
-    <>
-        <section className=''>
-            <img src="" alt="Giulia Barbizan" />
+    <section className="min-h-screen">
+        <section className='w-full h-auto p-6 flex justify-center flex-col items-center gap-10'>
+            <img src={foto} alt="Giulia Barbizan" className='w-2xs h-auto rounded-[145px]'/>
+            <div>
             <a href="">Linkedin</a>
             <a href="">Github</a>
-            <h2>Olá, eu sou a Giulia Barbizan!</h2>
+            </div>
+            <h2 className='text-2xl  font-medium font-fire text-mygreen'>Olá, eu sou a Giulia Barbizan!</h2>
         </section>
-        <section id='Sobre'>
-            <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam natus quisquam architecto officia accusamus optio sequi nisi distinctio eveniet aut dignissimos illo at pariatur, nemo quos alias explicabo doloribus. Necessitatibus repudiandae officia doloremque deleniti vel qui ad cum nostrum architecto, error dignissimos? Dignissimos sunt, iusto sed voluptates error eius distinctio?</p>
+        <section id='Sobre' className="h-9/10">
+            <p className="">Estudante de Engenharia de Software, apaixonada por inovação e tecnologia, com sólida base em Java e experiência em desenvolvimento front-end com React. Meu objetivo é me tornar desenvolvedora full-stack, criando soluções eficientes e bem estruturadas, sempre aplicando boas práticas e buscando aprimorar minhas habilidades para enfrentar novos desafios.</p>
             <a href="">Download CV</a>
             
         </section>
@@ -35,7 +38,7 @@ const Home = () => {
             <a href=""><img src="" alt="email" /></a>
             <a href=""><img src="" alt="linkedin" /></a>
         </section>
-    </>
+    </section>
   )
 }
 
