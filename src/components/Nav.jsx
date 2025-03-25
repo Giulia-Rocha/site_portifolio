@@ -1,16 +1,21 @@
-import React from 'react'
+import { Link } from "react-scroll";
 
 const Nav = () => {
   return (
-    <nav>
-        <ul className='w-full h-20 font-fire text-mygreen flex justify-center items-center gap-20'>
-            
-            <li><a href="#Projetos">Projetos</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
+    <nav className="w-full h-20 flex justify-center">
+      <ul className="font-fire text-mygreen flex justify-center items-center gap-20">
+        <Link to="projetos" smooth={true} duration={700} className="cursor-pointer">
+          Projetos
+        </Link>
+        <Link to="skills" smooth={true} duration={700} className="cursor-pointer">
+          Habilidades
+        </Link>
+        <Link to="contato" smooth={true} duration={700} className="cursor-pointer">
+          Contato
+        </Link>
+      </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

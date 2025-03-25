@@ -30,7 +30,7 @@ const Home = () => {
             <a href="" className='w-40 h-10 flex justify-center items-center rounded-4xl bg-mygreen font-fire text-lg font-semibold'>Download CV</a>
             
         </section>
-        <section id='Projetos'className='h-screen p-10'>
+        <section id='projetos'className='h-screen p-10'>
             <h2 class='text-3xl font-light text-mygreen flex justify-center '>Projetos</h2>
             <Swiper 
                 centeredSlides={true}
