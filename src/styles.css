@@ -4,7 +4,8 @@
   html,
   body {
     position: relative;
-    height: 100%;
+    height: auto;
+    min-width: 100% !important;
   }
   
   body {
@@ -12,12 +13,13 @@
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    
   }
   
   .swiper {
-    width: 70%;
+    width: 80%;
     height: 100%;
   }
   
@@ -72,4 +74,16 @@
 .swiper-one .swiper-slide img{
     width: 50px;
     height: 50px;
+}
+
+@media(max-width: 425px){
+  .swiper{
+    width: 100%;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+  display: none;
+
+  
+}
 }

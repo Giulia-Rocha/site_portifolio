@@ -14,9 +14,9 @@ import foto from './assets/foto_giulia.jpg'
 import projeto1 from './assets/web-challenge.png'
 const Home = () => {
   return (
-    <section className="min-h-screen ">
+    <section className="min-h-screen w-full">
         <section className='w-full h-auto p-6 flex justify-center flex-col items-center gap-10'>
-            <img src={foto} alt="Giulia Barbizan" className='w-2xs h-auto rounded-[145px]'/>
+            <img src={foto} alt="Giulia Barbizan" className='w-3xs md:w-2xs h-auto rounded-[145px]'/>
             <div className='flex gap-10'>
             <a href=""><img src="src/assets/linkedin.png" alt="Linkedin" /></a>
             <a href=""><img src="src/assets/github.png" alt="Github" /></a>
@@ -24,12 +24,12 @@ const Home = () => {
             
         </section>
         <section id='Sobre' className="min-h-[60vh] w-full p-10 flex flex-col items-center justify-center">
-            <h2 className='text-2xl  font-medium font-fire text-mygreen '>Olá, eu sou a Giulia Barbizan!</h2>
-            <p className=" text-amber-50 text-center md:text-justify p-15 text-lg  ">Estudante de Engenharia de Software, apaixonada por <span className='font-bold font-fire text-mygreen'>inovação e tecnologia</span> , com sólida base em Java e experiência em desenvolvimento front-end com React. <br/>Meu objetivo é me tornar desenvolvedora <span className='font-bold font-fire text-mygreen'>Full-stack</span> , criando soluções eficientes e bem estruturadas, sempre aplicando boas práticas e buscando aprimorar minhas habilidades para enfrentar novos desafios.</p>
+            <h2 className='text-xl  text-center md:text-2xl font-medium font-fire text-mygreen '>Olá, eu sou a Giulia Barbizan!</h2>
+            <p className=" text-amber-50 text-center md:text-justify p-15 md: text-lg  ">Estudante de Engenharia de Software, apaixonada por <span className='font-bold font-fire text-mygreen'>inovação e tecnologia</span> , com sólida base em Java e experiência em desenvolvimento front-end com React. <br/>Meu objetivo é me tornar desenvolvedora <span className='font-bold font-fire text-mygreen'>Full-stack</span> , criando soluções eficientes e bem estruturadas, sempre aplicando boas práticas e buscando aprimorar minhas habilidades para enfrentar novos desafios.</p>
             <a href="" className='w-40 h-10 flex justify-center items-center rounded-4xl bg-mygreen font-fire text-lg font-semibold'>Download CV</a>
             
         </section>
-        <section id='projetos'className='h-screen p-10'>
+        <section id='projetos'className='h-screen p-2 md:p-10'>
             <h2 class='text-3xl font-light text-mygreen flex justify-center '>Projetos</h2>
             <Swiper 
                 
@@ -39,10 +39,11 @@ const Home = () => {
                         640: {
                             slidesPerView: 1,
                             spaceBetween: 10,
+                            pagination: {clickable:true},
                         },
                         768:{
-                            slidesPerView: 1,
-                            spaceBetween: 10,
+                            slidesPerView: 2,
+                            spaceBetween: 30,
                         },
                         1024:{
                             slidesPerView: 2,
@@ -61,10 +62,10 @@ const Home = () => {
                 }
                 centeredSlides={true}
                 navigation = {true} 
-                modules = {[Navigation]} 
+                modules = {[Pagination,Navigation]} 
                 className='mySwiper m-10 md:w-70 lg:w-60'>
                 <SwiperSlide>
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg shadow-mygreen m-10 ">
+                    <div class="max-w-sm  rounded overflow-hidden shadow-lg shadow-mygreen m-10 ">
                         <img class="w-full" src={projeto1} alt="formula e website"/>
                         <div class="px-6 py-4">
                             <div class="font-semibold  font-fire text-xl mb-2 text-mygreen">Fórmula-E Website</div>
@@ -186,10 +187,14 @@ const Home = () => {
         </section>
         <section id='contato' className='min-h-[40vh] flex flex-col justify-center items-center gap-20 p-10'>
 
-            <h3 className=' w-1/3 h-15 rounded-3xl shadow-blue-500/50  flex justify-center items-center bg-mygreen text-myblack font-fire text-2xl'>Entre em contato comigo!</h3>
+            <div className='min-w-1/3 h-10 rounded-3xl flex justify-center items-center bg-mygreen p-8 '>
+                <h3 className=' text-myblack font-semibold font-fire text-2xl flex-wrap'>Entre em contato comigo!</h3>
+            </div>
+
+            
             <div className='w-fit flex gap-20'>
                 <a href="">
-                    <img src="src/assets/email.png" alt="email" className=''/>
+                    <img src="src/assets/email.png" alt="email" />
                 </a>
                 <a href=''>
                     <img src="src/assets/linkedin.png" alt="linkedin" />
