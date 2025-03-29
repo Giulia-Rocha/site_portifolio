@@ -17,7 +17,7 @@
   }
   
   .swiper {
-    width: 80%;
+    width: 70%;
     height: 100%;
   }
   
@@ -28,8 +28,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
-
+  
   
   .swiper-slide img {
     display: block;
@@ -41,7 +42,8 @@
   }
 .swiper-button-prev,
 .swiper-button-next {
-  color: #95D735 !important; /* Altera a cor das setas */
+  color: #95D735 ;
+  
 }
   
 

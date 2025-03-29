@@ -1,4 +1,3 @@
-import React, {useRef, useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -25,41 +24,108 @@ const Home = () => {
             
         </section>
         <section id='Sobre' className="min-h-[60vh] w-full p-10 flex flex-col items-center justify-center">
-            <h2 className='text-2xl  font-medium font-fire text-mygreen'>Olá, eu sou a Giulia Barbizan!</h2>
-            <p className=" text-amber-50 text-justify p-15 text-lg ">Estudante de Engenharia de Software, apaixonada por inovação e tecnologia, com sólida base em Java e experiência em desenvolvimento front-end com React. Meu objetivo é me tornar desenvolvedora full-stack, criando soluções eficientes e bem estruturadas, sempre aplicando boas práticas e buscando aprimorar minhas habilidades para enfrentar novos desafios.</p>
+            <h2 className='text-2xl  font-medium font-fire text-mygreen '>Olá, eu sou a Giulia Barbizan!</h2>
+            <p className=" text-amber-50 text-center md:text-justify p-15 text-lg  ">Estudante de Engenharia de Software, apaixonada por <span className='font-bold font-fire text-mygreen'>inovação e tecnologia</span> , com sólida base em Java e experiência em desenvolvimento front-end com React. <br/>Meu objetivo é me tornar desenvolvedora <span className='font-bold font-fire text-mygreen'>Full-stack</span> , criando soluções eficientes e bem estruturadas, sempre aplicando boas práticas e buscando aprimorar minhas habilidades para enfrentar novos desafios.</p>
             <a href="" className='w-40 h-10 flex justify-center items-center rounded-4xl bg-mygreen font-fire text-lg font-semibold'>Download CV</a>
             
         </section>
         <section id='projetos'className='h-screen p-10'>
             <h2 class='text-3xl font-light text-mygreen flex justify-center '>Projetos</h2>
             <Swiper 
+                
+                rewind ={true}
+                breakpoints ={
+                    {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        768:{
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        1024:{
+                            slidesPerView: 2,
+                            spaceBetween:20,
+
+                        
+                        },
+                        1440:{
+                            slidesPerView:2,
+                            spaceBetween:60,
+                        }
+
+                        
+
+                    }
+                }
                 centeredSlides={true}
-                slidesPerView={2}
                 navigation = {true} 
                 modules = {[Navigation]} 
-                className='mySwiper m-10'>
+                className='mySwiper m-10 md:w-70 lg:w-60'>
                 <SwiperSlide>
                     <div class="max-w-sm rounded overflow-hidden shadow-lg shadow-mygreen m-10 ">
-                    <img class="w-full" src={projeto1} alt="Sunset in the mountains"/>
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2 text-mygreen">The Coldest Sunset</div>
-                        <p class="text-amber-50 text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                        </p>
-                    </div>
-                    <div class="px-6 pt-4 pb-2">
-                        <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#React</span>
-                        <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#TailwindCSS</span>
-                        <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#Javascript</span>
-                    </div>
+                        <img class="w-full" src={projeto1} alt="formula e website"/>
+                        <div class="px-6 py-4">
+                            <div class="font-semibold  font-fire text-xl mb-2 text-mygreen">Fórmula-E Website</div>
+                            <p class="text-amber-50 text-base">
+                                Página web desenvolvida com React + Vite, usando Styled Components para estilização e responsividade.
+                                Criada com a finalidade de dar mais visibilidade para a Fórmula-E
+                            </p>
+                        </div>
+                        <div class="px-6 pt-4 pb-2">
+                            <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#React</span>
+                            <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#StyledComponents</span>
+                            <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#Javascript</span>
+                        </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>slide 1</SwiperSlide>
-                <SwiperSlide>slide 1</SwiperSlide>
-                <SwiperSlide>slide 1</SwiperSlide>
-                <SwiperSlide>slide 1</SwiperSlide>
-                
-
+                <SwiperSlide>
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg shadow-mygreen m-10 ">
+                        <img class="w-full" src="src/assets/near-guard.jpg" alt="near guard"/>
+                        <div class="px-6 py-4">
+                            <div class="font-semibold font-fire text-xl mb-2 text-mygreen">Near Guard</div>
+                            <p class="text-amber-50 text-base">
+                                Dispositivo Iot usado para medir a distância entre o carro e obstáculos ou oponentes, ajudando pilotos a tomarem decisões mais precisas em ultrapassagens e durante a corrida.
+                            </p>
+                        </div>
+                        <div class="px-6 pt-4 pb-2">
+                            <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#C++</span>
+                            <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#Python</span>
+                            <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#Azure</span>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg shadow-mygreen m-10 ">
+                        <img class="w-full" src="src/assets/smart-energy.png" alt="smart energy"/>
+                        <div class="px-6 py-4">
+                            <div class="font-semibold font-fire text-xl mb-2 text-mygreen">Smart Energy</div>
+                            <p class="text-amber-50 text-base">
+                            Solução IoT que visa mitigar os desafios técnicos e sociais da implementação de microrredes no Brasil, promovendo acesso universal à energia de forma sustentável, eficiente e inclusiva.
+                            </p>
+                        </div>
+                        <div class="px-6 pt-4 pb-2">
+                            <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#C++</span>
+                            <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#Python</span>
+                            <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#Azure</span>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg shadow-mygreen m-10 ">
+                        <img class="w-full" src="src/assets/fish-manager.png" alt="script fih manager"/>
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2 text-mygreen">Fish Manager</div>
+                            <p class="text-amber-50 text-base">
+                                O Fish Manager é um sistema de gestão de aquacultura desenvolvido em Python para ajudar piscicultores a gerenciar suas operações de cultivo de peixes de forma eficiente e sustentável.
+                            </p>
+                        </div>
+                        <div class="px-6 pt-4 pb-2">
+                            <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#Python</span> 
+                        </div>
+                    </div>
+                </SwiperSlide>
             </Swiper>
         </section>
         <section id='skills' className=''>
