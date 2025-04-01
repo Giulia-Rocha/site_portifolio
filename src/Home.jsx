@@ -245,10 +245,10 @@ const Home = () => {
 
             
             <div className='w-fit flex gap-20'>
-                <a href="">
+                <a href="mailto:giuliabarbizan@gmail.com">
                     <img src={email} alt="email" />
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/in/giulia-barbizan">
                     <img src={linkedin} alt="linkedin" />
                 </a>
             </div>
