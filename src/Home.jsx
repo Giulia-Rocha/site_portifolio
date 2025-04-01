@@ -91,7 +91,7 @@ const Home = () => {
                 centeredSlides={true}
                 navigation = {true} 
                 modules = {[Pagination,Navigation]} 
-                className='mySwiper m-10 md:w-70 lg:w-60 '>
+                className='mySwiper m-10 md:w-70 lg:60 '>
                 <SwiperSlide>
                     <div class="max-w-sm  rounded overflow-hidden shadow-lg shadow-mygreen m-10 ">
                         <img class="w-full" src={projeto1} alt="formula e website"/>
@@ -239,7 +239,7 @@ const Home = () => {
         </section>
         <section id='contato' className=' min-h-[60vh] flex flex-col justify-center items-center gap-20 p-5'>
 
-            <div className='w-[80%] sm:w-[40%] h-10 rounded-3xl flex justify-center items-center bg-mygreen p-8 '>
+            <div className='w-[80%] sm:w-[40%] lg:w-[20%] h-10 rounded-3xl flex justify-center items-center bg-mygreen p-8 '>
                 <h3 className=' text-myblack font-bold font-fire text-[16px] sm:text-xl text-center'>Entre em contato comigo!</h3>
             </div>
 

@@ -223,4 +223,9 @@
     display: none;
   }
 }
+@media(min-width:1024px){
+  .mySwiper{
+    width: 70%;
+  }
+}
 
