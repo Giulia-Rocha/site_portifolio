@@ -246,10 +246,10 @@ const Home = () => {
             
             <div className='w-fit flex gap-20'>
                 <a href="mailto:giuliabarbizan@gmail.com">
-                    <img src={email} alt="email" />
+                    <img src={email} alt="email" className=' transition duration-300 hover:opacity-75 hover:scale-110' />
                 </a>
                 <a href="https://www.linkedin.com/in/giulia-barbizan">
-                    <img src={linkedin} alt="linkedin" />
+                    <img src={linkedin} alt="linkedin" className=' transition duration-300 hover:opacity-75 hover:scale-110'/>
                 </a>
             </div>
             
