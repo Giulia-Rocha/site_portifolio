@@ -21,7 +21,7 @@ const MenuHamburguer = () => {
 
       {/* Menu */}
       <nav className={`menu ${isOpen ? "open" : ""}`}>
-        <ul className="font-fire text-mygreen  text-lg flex flex-wrap justify-center items-center gap-10 ">
+        <ul className=" section font-fire text-mygreen  text-lg flex flex-col flex-wrap justify-center items-center gap-10 ">
             <Link to="projetos" smooth={true} duration={700} className="cursor-pointer">
             Projetos
             </Link>

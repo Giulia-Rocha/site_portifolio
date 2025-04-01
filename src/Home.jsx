@@ -32,6 +32,7 @@ import nearguard from './assets/near-guard.jpg'
 import smartEnergy from './assets/smart-energy.png'
 
 
+
 const Home = () => {
   return (
     <section className="min-h-screen w-full">
@@ -46,10 +47,10 @@ const Home = () => {
         <section id='Sobre' className="min-h-[60vh] w-full p-10 flex flex-col items-center justify-center gap-40 lg:gap-10">
             <h2 className='text-xl  text-center md:text-2xl font-medium font-fire text-mygreen '>Olá, eu sou a Giulia Barbizan!</h2>
             <p className=" text-amber-50 text-center md:text-justify  md: text-lg lg:p-30  ">Estudante de Engenharia de Software, apaixonada por <span className='font-bold font-fire text-mygreen'>inovação e tecnologia</span> , com sólida base em Java e experiência em desenvolvimento front-end com React. <br/>Meu objetivo é me tornar desenvolvedora <span className='font-bold font-fire text-mygreen'>Full-stack</span> , criando soluções eficientes e bem estruturadas, sempre aplicando boas práticas e buscando aprimorar minhas habilidades para enfrentar novos desafios.</p>
-            <a href="" className='w-40 h-10 flex justify-center items-center rounded-4xl bg-mygreen font-fire text-lg font-semibold'>Download CV</a>
+            <a href="/CV-Giulia_Barbizan.pdf" download="Cv-Giulia.pdf" className='w-40 h-10 flex justify-center items-center rounded-4xl bg-mygreen font-fire text-lg font-semibold'>Download CV</a>
             
         </section>
-        <section id='projetos'className='h-screen p-2 md:p-10'>
+        <section id='projetos'className='h-screen  gp-2 md:p-10 flex flex-col justify-around'>
             <h2 class='text-3xl font-light text-mygreen flex justify-center '>Projetos</h2>
             <Swiper 
                 
@@ -69,7 +70,7 @@ const Home = () => {
                         },
                         768:{
                             slidesPerView: 1,
-                            spaceBetween: 30,
+                            spaceBetween: 0,
                         },
                         1024:{
                             slidesPerView: 2,
@@ -90,7 +91,7 @@ const Home = () => {
                 centeredSlides={true}
                 navigation = {true} 
                 modules = {[Pagination,Navigation]} 
-                className='mySwiper m-10 md:w-70 lg:w-60'>
+                className='mySwiper m-10 md:w-70 lg:w-60 '>
                 <SwiperSlide>
                     <div class="max-w-sm  rounded overflow-hidden shadow-lg shadow-mygreen m-10 ">
                         <img class="w-full" src={projeto1} alt="formula e website"/>
@@ -101,7 +102,7 @@ const Home = () => {
                                 Criada com a finalidade de dar mais visibilidade para a Fórmula-E
                             </p>
                         </div>
-                        <div class="px-6 pt-4 pb-2  ">
+                        <div class="px-6 pt-4 pb-2 ">
                             <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#React</span>
                             <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#StyledComponents</span>
                             <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#Javascript</span>
@@ -156,7 +157,7 @@ const Home = () => {
                 </SwiperSlide>
             </Swiper>
         </section>
-        <section id='skills' className=''>
+        <section id='skills' className=' min-h-[50vh] flex flex-col items-center justify-around'>
             <h2 className='text-3xl font-light text-mygreen flex justify-center mt-20'>Habilidades</h2>
             <Swiper
                 

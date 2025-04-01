@@ -4,7 +4,7 @@ import MenuHamburguer from "./MenuHamburguer";
 
 const Nav = () => {
   return (
-    <div className="header">   
+    <div className="header h-auto">   
       <nav className="menu-big w-full h-20 flex  p-2 justify-center">
         <ul className="font-fire text-mygreen  text-lg flex flex-wrap justify-center items-center gap-20">
           <Link to="projetos" smooth={true} duration={700} className="cursor-pointer">
