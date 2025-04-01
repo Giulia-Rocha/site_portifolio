@@ -14,6 +14,22 @@ import foto from './assets/foto_giulia.jpg'
 import projeto1 from './assets/web-challenge.png'
 import linkedin from './assets/linkedin.png'
 import github from './assets/github.png'
+import css from './assets/css.png'
+import react from './assets/react.png'
+import figma from './assets/figma.png'
+import email from './assets/email.png'
+import html from './assets/html.png'
+import blackgithub from './assets/icons8-github-100.png'
+import java from './assets/java.png'
+import js from './assets/js.png'
+import sql from './assets/mysql.png'
+import node from './assets/node-js.png'
+import postman from'./assets/postman.png'
+import python from './assets/python.png'
+import tailwind from './assets/tailwind.png'
+import fish from './assets/fish-manager.png'
+import nearguard from './assets/near-guard.jpg'
+import smartEnergy from './assets/smart-energy.png'
 const Home = () => {
   return (
     <section className="min-h-screen w-full">
@@ -92,7 +108,7 @@ const Home = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="max-w-sm rounded overflow-hidden shadow-lg shadow-mygreen m-10 ">
-                        <img class="w-full" src="src/assets/near-guard.jpg" alt="near guard"/>
+                        <img class="w-full" src={nearguard} alt="near guard"/>
                         <div class="px-6 py-4">
                             <div class="font-semibold font-fire text-xl mb-2 text-mygreen">Near Guard</div>
                             <p class="text-amber-50 text-base">
@@ -108,7 +124,7 @@ const Home = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div class="max-w-sm rounded overflow-hidden shadow-lg shadow-mygreen m-10 ">
-                        <img class="w-full" src="src/assets/smart-energy.png" alt="smart energy"/>
+                        <img class="w-full" src={smartEnergy} alt="smart energy"/>
                         <div class="px-6 py-4">
                             <div class="font-semibold font-fire text-xl mb-2 text-mygreen">Smart Energy</div>
                             <p class="text-amber-50 text-base">
@@ -124,7 +140,7 @@ const Home = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div class="max-w-sm rounded overflow-hidden shadow-lg shadow-mygreen m-10 ">
-                        <img class="w-full" src="src/assets/fish-manager.png" alt="script fih manager"/>
+                        <img class="w-full" src={fish} alt="script fih manager"/>
                         <div class="px-6 py-4">
                             <div class="font-bold text-xl mb-2 text-mygreen">Fish Manager</div>
                             <p class="text-amber-50 text-base">
@@ -178,41 +194,41 @@ const Home = () => {
                 className="swiper-one"
             >
                 <SwiperSlide>
-                    <img src="src/assets/css.png" alt="css logo" className='w-48 h-auto' />
+                    <img src={css} alt="css logo" className='w-48 h-auto' />
     
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="src/assets/react.png" alt="" />    
+                    <img src={react} alt="" />    
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src="src/assets/html.png" alt="" />
+                <img src={html} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="src/assets/tailwind.png" alt="" />
+                    <img src={tailwind} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="src/assets/figma.png" alt="" />
+                    <img src={figma} alt="" />
                   </SwiperSlide>
                 <SwiperSlide>
-                    <img src="src/assets/icons8-github-100.png" alt="" />
+                    <img src={blackgithub} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src="src/assets/java.png" alt="" />
+                <img src={java} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src="src/assets/python.png" alt="" />
+                <img src={python} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src="src/assets/node-js.png" alt="" />
+                <img src={node} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src="src/assets/mysql.png" alt="" />
+                <img src={sql} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src="src/assets/postman.png" alt="" />
+                <img src={postman} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src="src/assets/js.png" alt="" />
+                <img src={js} alt="" />
                 </SwiperSlide>
 
             </Swiper>
@@ -227,10 +243,10 @@ const Home = () => {
             
             <div className='w-fit flex gap-20'>
                 <a href="">
-                    <img src="src/assets/email.png" alt="email" />
+                    <img src={email} alt="email" />
                 </a>
-                <a href=''>
-                    <img src="src/assets/linkedin.png" alt="linkedin" />
+                <a href="">
+                    <img src={linkedin} alt="linkedin" />
                 </a>
             </div>
             
