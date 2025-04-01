@@ -80,6 +80,77 @@
   bottom: var(--swiper-pagination-bottom, 60px);
 }
 
+/* Estilo menu hamburguer*/
+
+.hamburguer-menu-container{
+  position: relative;
+  display:none;
+  
+}
+
+
+.hamburger-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 30px;
+}
+
+.hamburger-icon .bar {
+  width: 30px;
+  height: 3px;
+  background: #95D735;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Transformações para o ícone de "X" quando o menu estiver aberto */
+.hamburger-icon .bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon .bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Estilos do menu */
+.menu {
+  position: absolute;
+  top: 5px;
+  right: 90px;
+  width: 200px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  
+  
+  
+}
+
+.menu.open {
+  min-height: 250px;
+  background:#1E1E20;
+  display: flex;
+
+  
+  
+  
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
 @media(max-width: 425px){
 
   .swiper-button-prev,
@@ -113,6 +184,16 @@
 @media(min-width:640px){
   .swiper-horizontal > .swiper-pagination-bullets, 
   .swiper-pagination-bullets.swiper-pagination-horizontal{
+    display: none;
+  }
+}
+@media(max-width:768px){
+  .menu-big{
+    display: none;
+  }
+}
+@media(min-width:769px){
+  .hamburguer{
     display: none;
   }
 }

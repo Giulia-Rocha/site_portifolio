@@ -30,6 +30,8 @@ import tailwind from './assets/tailwind.png'
 import fish from './assets/fish-manager.png'
 import nearguard from './assets/near-guard.jpg'
 import smartEnergy from './assets/smart-energy.png'
+
+
 const Home = () => {
   return (
     <section className="min-h-screen w-full">
