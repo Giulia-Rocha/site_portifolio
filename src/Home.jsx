@@ -12,20 +12,22 @@ import { Navigation, Pagination,  Autoplay } from 'swiper/modules';
 
 import foto from './assets/foto_giulia.jpg'
 import projeto1 from './assets/web-challenge.png'
+import linkedin from './assets/linkedin.png'
+import github from './assets/github.png'
 const Home = () => {
   return (
     <section className="min-h-screen w-full">
         <section className='w-full h-auto p-6 flex justify-center flex-col items-center gap-10'>
             <img src={foto} alt="Giulia Barbizan" className='w-3xs md:w-2xs h-auto rounded-[145px]'/>
             <div className='flex gap-10'>
-            <a href=""><img src="src/assets/linkedin.png" alt="Linkedin" /></a>
-            <a href=""><img src="src/assets/github.png" alt="Github" /></a>
+            <a href="https://www.linkedin.com/in/giulia-barbizan"><img src={linkedin} alt="Linkedin" /></a>
+            <a href="https://github.com/Giulia-Rocha"><img src={github} alt="Github" /></a>
             </div>
             
         </section>
-        <section id='Sobre' className="min-h-[60vh] w-full p-10 flex flex-col items-center justify-center">
+        <section id='Sobre' className="min-h-[60vh] w-full p-10 flex flex-col items-center justify-center gap-40 lg:gap-10">
             <h2 className='text-xl  text-center md:text-2xl font-medium font-fire text-mygreen '>Olá, eu sou a Giulia Barbizan!</h2>
-            <p className=" text-amber-50 text-center md:text-justify p-15 md: text-lg  ">Estudante de Engenharia de Software, apaixonada por <span className='font-bold font-fire text-mygreen'>inovação e tecnologia</span> , com sólida base em Java e experiência em desenvolvimento front-end com React. <br/>Meu objetivo é me tornar desenvolvedora <span className='font-bold font-fire text-mygreen'>Full-stack</span> , criando soluções eficientes e bem estruturadas, sempre aplicando boas práticas e buscando aprimorar minhas habilidades para enfrentar novos desafios.</p>
+            <p className=" text-amber-50 text-center md:text-justify  md: text-lg lg:p-30  ">Estudante de Engenharia de Software, apaixonada por <span className='font-bold font-fire text-mygreen'>inovação e tecnologia</span> , com sólida base em Java e experiência em desenvolvimento front-end com React. <br/>Meu objetivo é me tornar desenvolvedora <span className='font-bold font-fire text-mygreen'>Full-stack</span> , criando soluções eficientes e bem estruturadas, sempre aplicando boas práticas e buscando aprimorar minhas habilidades para enfrentar novos desafios.</p>
             <a href="" className='w-40 h-10 flex justify-center items-center rounded-4xl bg-mygreen font-fire text-lg font-semibold'>Download CV</a>
             
         </section>
@@ -35,14 +37,20 @@ const Home = () => {
                 
                 rewind ={true}
                 breakpoints ={
-                    {
+                    {   
+                        320:{
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        
+                        },
                         640: {
                             slidesPerView: 1,
                             spaceBetween: 10,
-                            pagination: {clickable:true},
+                            
+                            
                         },
                         768:{
-                            slidesPerView: 2,
+                            slidesPerView: 1,
                             spaceBetween: 30,
                         },
                         1024:{
@@ -60,6 +68,7 @@ const Home = () => {
 
                     }
                 }
+                pagination = { true}
                 centeredSlides={true}
                 navigation = {true} 
                 modules = {[Pagination,Navigation]} 
@@ -74,7 +83,7 @@ const Home = () => {
                                 Criada com a finalidade de dar mais visibilidade para a Fórmula-E
                             </p>
                         </div>
-                        <div class="px-6 pt-4 pb-2">
+                        <div class="px-6 pt-4 pb-2  ">
                             <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#React</span>
                             <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#StyledComponents</span>
                             <span class="inline-block bg-mygreen rounded-full px-3 py-1 text-sm font-semibold text-myblack mr-2 mb-2">#Javascript</span>
@@ -132,9 +141,33 @@ const Home = () => {
         <section id='skills' className=''>
             <h2 className='text-3xl font-light text-mygreen flex justify-center mt-20'>Habilidades</h2>
             <Swiper
-                spaceBetween={20}
-                slidesPerView={10}
+                
                 centeredSlides={true}
+                breakpoints ={
+                    {
+                        320:{
+                            slidesPerView:3
+                        },
+                        640: {
+                            slidesPerView:4
+                            
+                        },
+                        768:{
+                            slidesPerView: 5
+                        },
+                        1024:{
+                            slidesPerView: 7
+
+                        },
+                        1440:{
+                            slidesPerView:10
+                            
+                        }
+
+                        
+
+                    }
+                }
                 autoplay={{
                 delay: 1000,
                 disableOnInteraction: false,
@@ -185,10 +218,10 @@ const Home = () => {
             </Swiper>
     
         </section>
-        <section id='contato' className='min-h-[40vh] flex flex-col justify-center items-center gap-20 p-10'>
+        <section id='contato' className=' min-h-[60vh] flex flex-col justify-center items-center gap-20 p-5'>
 
-            <div className='min-w-1/3 h-10 rounded-3xl flex justify-center items-center bg-mygreen p-8 '>
-                <h3 className=' text-myblack font-semibold font-fire text-2xl flex-wrap'>Entre em contato comigo!</h3>
+            <div className='w-[80%] sm:w-[40%] h-10 rounded-3xl flex justify-center items-center bg-mygreen p-8 '>
+                <h3 className=' text-myblack font-bold font-fire text-[16px] sm:text-xl text-center'>Entre em contato comigo!</h3>
             </div>
 
             

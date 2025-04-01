@@ -1,5 +1,5 @@
 #app {
-    height: 100%;
+    min-height: 100%;
   }
   html,
   body {
@@ -75,10 +75,33 @@
     width: 50px;
     height: 50px;
 }
+.swiper-horizontal > .swiper-pagination-bullets,
+ .swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: var(--swiper-pagination-bottom, 60px);
+}
 
 @media(max-width: 425px){
-  .swiper{
-    width: 100%;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+  display: none;
+
+  
+}
+.swiper-one{
+  width: 80%;
+  
+}
+.swiper-one .swiper-slide {
+  justify-content: center;
+  
+}
+
+}
+
+@media(max-width:640px){
+  .my-swiper{
+    width: 90%;
   }
   .swiper-button-prev,
   .swiper-button-next {
@@ -86,4 +109,10 @@
 
   
 }
+}
+@media(min-width:640px){
+  .swiper-horizontal > .swiper-pagination-bullets, 
+  .swiper-pagination-bullets.swiper-pagination-horizontal{
+    display: none;
+  }
 }
